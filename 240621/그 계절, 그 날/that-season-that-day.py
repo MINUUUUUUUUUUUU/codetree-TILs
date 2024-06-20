@@ -3,10 +3,11 @@ def season(y,m,d):
     if m in [4,6,9,11]:
         if d > 30:
             return -1
-    if m is 2:
-        if (y%4==0 and y%100!=0 and d>29) or (y%400==0 and d>29):
-            return -1
-        elif (y%4 != 0 and d>28):
+    if m == 2:
+        if (y % 400 == 0 or (y % 4 == 0 and y % 100 != 0)):
+            if d > 29:
+                return -1
+        elif d > 28:
             return -1
 
     if m in [3,4,5]:
