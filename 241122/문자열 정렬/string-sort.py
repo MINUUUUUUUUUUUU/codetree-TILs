@@ -1,0 +1,5 @@
+s = input()
+arr = list(s)
+arr.sort()
+sorted_arr=''.join(arr)
+print(sorted_arr)
